@@ -25,6 +25,7 @@ mim install mmdet3d==1.1.1
 ```bash
 pip install spconv-cu117
 pip install timm
+pip install wandb
 ```
 
 ## 4. Install custom CUDA ops
@@ -39,6 +40,8 @@ cd model/head/localagg_prob_fast && pip install -e .
 ## 5. (Optional) For visualization
 ```bash
 pip install pyvirtualdisplay mayavi matplotlib==3.7.2 PyQt5
+pip install rerun-sdk
+pip install open3d
 ```
 
 
