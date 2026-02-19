@@ -40,3 +40,30 @@ cd model/head/localagg_prob_fast && pip install -e .
 ```bash
 pip install pyvirtualdisplay mayavi matplotlib==3.7.2 PyQt5
 ```
+
+
+
+
+# 1. 환경 변수 설정 (Blackwell 최적화)
+export TORCH_CUDA_ARCH_LIST="12.0"
+export FORCE_CUDA=1
+
+# 2. 직접 설치 (pip 대신 setup.py 사용 추천)
+python setup.py develop
+
+
+# Local Aggregation Ops
+cd model/encoder/gaussian_encoder/ops 
+python setup.py develop
+
+cd /workspace/GaussianFormer/model/head/localagg
+python setup.py develop
+
+cd ../localagg_prob
+python setup.py develop
+
+cd ../localagg_prob_fast
+python setup.py develop
+
+
+# Docker container setup(Blackwell CUDA 12.8)
